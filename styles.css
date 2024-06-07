@@ -1,5 +1,6 @@
 /* Common styles*/
-*{
+
+* {
     margin: 0;
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -10,61 +11,70 @@
     color: var(--white-color);
 }
 
-:root{
-    --primary-color : #2b81e4;
-    --secondary-color : #eee;
-    --white-color :#fff;
-    --gray-color : #555;
-    --lightgray-color : #777;
-
+:root {
+    --primary-color: #2b81e4;
+    --secondary-color: #eee;
+    --white-color: #fff;
+    --gray-color: #555;
+    --lightgray-color: #777;
 }
-.center{
+
+.center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.container{
+
+.container {
     background-color: var(--secondary-color);
     margin: 2em;
     box-shadow: 0em 1em 3em var(--gray-color);
     overflow: hidden;
 }
+
+
 /* End of common styles */
+
 
 /* Header Styles*/
 
-.header{
+.header {
     width: 100%;
     height: calc(100vh - 4em);
-    background: linear-gradient(rgba(23, 89, 231, 0.5),rgba(115, 221, 240,0.3)),url(images/welder.jpeg) center no-repeat ;
+    background: linear-gradient(rgba(23, 89, 231, 0.5), rgba(115, 221, 240, 0.3)), url(images/welder.jpeg) center no-repeat;
     background-size: cover;
     position: relative;
     perspective: 50em;
 }
-.header-text{
+
+.header-text {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     text-shadow: .1em .1em 0.2em var(--lightgray-color);
 }
-.heading{
+
+.heading {
     font-size: 2.5em;
 }
-.header-paragraph{
+
+.header-paragraph {
     color: var(--secondary-color);
     margin: auto;
     max-width: 30em;
 }
 
-.logo{
+.logo {
     position: absolute;
     top: 2em;
     right: 2em;
 }
-.logo h1{
+
+.logo h1 {
     display: flex;
 }
-.logo h1 span{
+
+.logo h1 span {
     color: var(--primary-color);
     text-transform: uppercase;
     background-color: var(--white-color);
@@ -72,51 +82,57 @@
     height: 1.5em;
     margin: .25em;
     border-radius: 50%;
-    
 }
-.logo h1 span:nth-child(1){
+
+.logo h1 span:nth-child(1) {
     animation: drop-letters 5s 0.1s infinite;
 }
-.logo h1 span:nth-child(2){
+
+.logo h1 span:nth-child(2) {
     animation: drop-letters 5s 0.2s infinite;
 }
-.logo h1 span:nth-child(3){
+
+.logo h1 span:nth-child(3) {
     animation: drop-letters 5s 0.3s infinite;
 }
-.logo h1 span:nth-child(4){
+
+.logo h1 span:nth-child(4) {
     animation: drop-letters 5s 0.4s infinite;
 }
-.logo h1 span:nth-child(5){
+
+.logo h1 span:nth-child(5) {
     animation: drop-letters 5s 0.5s infinite;
 }
-.logo h1 span:nth-child(6){
+
+.logo h1 span:nth-child(6) {
     animation: drop-letters 5s 0.6s infinite;
 }
-.logo h1 span:nth-child(7){
+
+.logo h1 span:nth-child(7) {
     animation: drop-letters 5s 0.7s infinite;
 }
 
-@keyframes drop-letters{
-    0%{
+@keyframes drop-letters {
+    0% {
         transform: translateY(0);
     }
-    10%{
+    10% {
         transform: translateY(0);
     }
-    15%{
+    15% {
         transform: translateY(-100%);
     }
-    20%{
+    20% {
         transform: translateY(0);
     }
-    100%{
+    100% {
         transform: translateY(0);
     }
 }
 
-.header-image{
+.header-image {
     width: 35%;
-    animation: image-float 150s infinite;
+    animation: image-float 100s infinite;
 }
 
 @keyframes image-float {
@@ -136,17 +152,198 @@
         transform: translateZ(-100em) translateX(100em);
         opacity: 0.8;
     }
-    
     100% {
         transform: translateZ(20em);
         opacity: 1;
     }
 }
 
+
 /* End of Header Styles*/
+
 
 /* Popular Tours*/
 
+.popular-tours {
+    padding: 2em 0 4em 0;
+}
+
+.popular-tours-heading {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2em;
+    color: var(--primary-color);
+    text-shadow: 0 0.2rem 0.1rem var(--primary-color);
+}
+
+.card-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card {
+    width: 20rem;
+    position: relative;
+    perspective: 150rem;
+}
+
+.card-image {
+    width: 100%;
+}
+
+.front-side {
+    text-align: center;
+    background-color: var(--secondary-color);
+    position: relative;
+    z-index: 10;
+    opacity: .9;
+    transition: opacity .4s, transform .4s, box-shadow .4s;
+}
+
+.change>.front-side {
+    transform: translateZ(-5rem) translateX(2rem);
+    box-shadow: 0 2rem 4rem #777;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.tour-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: absolute;
+    top: 75px;
+    right: 1.5rem;
+    text-shadow: 0 0 0.3rem var(--primary-color);
+}
+
+.card-list {
+    width: 80%;
+    margin: auto;
+    padding: 1rem 0;
+}
+
+.card-list-item {
+    color: var(--gray-color);
+    margin: 1rem 0;
+    border-bottom: var(--primary-color) solid 0.15rem;
+    padding-bottom: 1rem;
+}
+
+.back-side {
+    position: absolute;
+    top: 0;
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    box-shadow: 0.2rem 0.2rem 1rem var(--gray-color);
+    transform: translateZ(-5rem) translateX(2rem);
+    opacity: .5;
+}
+
+.change>.back-side {
+    transform: translateZ(0) translateX(0);
+    box-shadow: 0.2rem .2rem 1rem #aaa;
+    opacity: 0.9;
+}
+
+.tour-price {
+    font-size: 3rem;
+    margin: 2rem 0;
+    font-weight: 300;
+}
+
+.card-button {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    border: none;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.navigation-button {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: .5rem .5rem;
+    border: none;
+    border-radius: .5rem;
+    background-color: rgba(253, 253, 253, 0.6);
+    color: var(--lightgray-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    cursor: pointer;
+}
 
 
 /* End of Popular Tours*/
+
+
+/* Stories */
+
+.stories {
+    padding: 5rem 0;
+    position: relative;
+}
+.video-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+}
+video{
+    width: 100%;
+}
+.stories-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.stories-main-header{
+    color: #000;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+.story-bg {
+    background-color: rgba(238, 238, 238, .85);
+    padding: 1rem 4rem;
+    margin: 2rem;
+    width: 70%;
+    box-shadow: 0 2rem 2rem rgba(47, 53, 54, 0.3) ;
+    transform: skewX(20deg);
+}
+.story{
+    transform: skewX(-20deg);
+    display: flex;
+    align-items: center;
+}
+
+.story-image {
+    width: 10rem;
+    height: 10rem;
+    margin-right: 2rem
+    
+}
+.story-heading{
+    color: var(--gray-color);  
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+.story-paragraph{
+    color: var(--lightgray-color);
+}
+.story-paragraph::first-letter{
+    margin-left: 1rem;
+}
+
+
+
+
+/* End of Stories */
