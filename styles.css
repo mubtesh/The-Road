@@ -305,7 +305,7 @@ video{
     flex-direction: column;
     align-items: center;
 }
-.stories-main-header{
+.stories-main{
     color: #000;
     text-transform: uppercase;
     font-size: 2.5rem;
@@ -318,6 +318,8 @@ video{
     width: 70%;
     box-shadow: 0 2rem 2rem rgba(47, 53, 54, 0.3) ;
     transform: skewX(20deg);
+ 
+
 }
 .story{
     transform: skewX(-20deg);
@@ -343,7 +345,68 @@ video{
     margin-left: 1rem;
 }
 
-
-
-
 /* End of Stories */
+
+/* Start of Contacts section */
+.contact{
+    padding: 5rem;
+    text-align: center;
+    background: url(./images/contact-bgd.png) center no-repeat;
+    background-size: cover;
+}
+.contact-heading{
+    font-size:2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+    color: var(--white-color);
+    text-shadow: 0 .25rem .25rem black;
+    margin-bottom:4rem;
+}
+.contact-form{
+    width: 40rem;
+    height: 25rem;
+    background-color: var(--lightgray-color);
+    margin: auto;
+    flex-direction: column;
+    padding: 0 2rem;
+    border-radius: .5rem;
+}
+.input-group{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: .5rem 0;
+    padding: .5rem 1rem;
+    background-color: var(--secondary-color);
+    border-radius: 0.5rem;
+}
+.input-groups{
+    width:100%;
+    display: flex;
+    gap: 2rem;
+}
+.input-group input, .input-group textarea{
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border: none;
+    background-color: var(--secondary-color);
+    color: var(--gray-color);
+    
+}
+.input-group label{
+    color: var(--lightgray-color);
+    text-align: left;
+    padding-left: .5rem;
+}
+.form-btn{
+    width: 100%;
+    padding: .5rem;
+    background-color: var(--gray-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+/* End of Contacts section */
